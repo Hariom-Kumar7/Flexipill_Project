@@ -74,8 +74,9 @@ public class SeleniumAutometion {
 	public void placeOrder() throws InterruptedException {
 		JavascriptExecutor js2 = (JavascriptExecutor)driver;
 		Thread.sleep(2000);
-		WebElement scrollUpto = driver.findElement(By.xpath("//h2[@class='MuiTypography-root MuiTypography-h2 platinumrx-1almcn1']"));
+		WebElement scrollUpto = driver.findElement(By.xpath("//div[@class='biling-details_paymentOptions__wfcg5']"));
 		js2.executeScript("arguments[0].scrollIntoView();", scrollUpto);
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("//button[text()='Place Order']")).click();
 	}
 	@AfterTest
